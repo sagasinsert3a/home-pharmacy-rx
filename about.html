@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Home Pharmacy Mission & Vision</title>
+  <meta name="description" content="Learn about Home Pharmacy's mission to bridge the healthcare gap for uninsured and vulnerable individuals in Orlando, Florida." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Urbanist:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-header {
+      background: linear-gradient(180deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+      color: #fff;
+      padding: 5rem 0 4rem;
+      text-align: center;
+      border-bottom: 1px solid var(--color-border-dark);
+    }
+    .page-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.25rem, 4vw, 3.25rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .page-subtitle {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .about-story-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin: 4rem 0;
+    }
+    @media (min-width: 860px) {
+      .about-story-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+    }
+    .about-story-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <div class="container announcement-inner">
+      <span>Serving Orlando & Central Florida with Compassionate, Affordable Pharmacy Care</span>
+      <div class="top-contact-links">
+        <a href="tel:4076360929">📞 (407) 636-0929</a>
+        <span class="sep">•</span>
+        <a href="mailto:ceo@homepharmacyrx.com">✉️ ceo@homepharmacyrx.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-mark">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            <path d="M12 7v6"/>
+            <path d="M9 10h6"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">HOME PHARMACY</span>
+          <span class="brand-tagline">COMMUNITY & CHARITABLE CARE</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link" style="color:var(--color-accent-gold)">About Us</a></li>
+          <li class="nav-item"><a href="patients.html" class="nav-link">Patients</a></li>
+          <li class="nav-item"><a href="prescribers.html" class="nav-link">Prescribers</a></li>
+          <li class="nav-item"><a href="medications.html" class="nav-link">Medications</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="donate.html" class="btn btn-outline-gold">Donate Today</a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="logo-text"><span class="brand-name">HOME PHARMACY</span></div>
+      <button class="close-drawer-btn" id="closeDrawerBtn">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="patients.html">For Patients</a></li>
+      <li><a href="prescribers.html">For Prescribers</a></li>
+      <li><a href="medications.html">Medications Available</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="donate.html" class="drawer-donate-btn">Donate Today</a></li>
+    </ul>
+  </div>
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">About Home Pharmacy</h1>
+      <p class="page-subtitle">Dedicated to eliminating financial barriers and ensuring equitable medication access across Central Florida.</p>
+    </div>
+  </section>
+
+  <!-- Story & Mission -->
+  <main class="container" style="padding-bottom:5rem;">
+    
+    <div class="about-story-grid" id="mission">
+      <div>
+        <h2 class="section-title">Our Mission & Purpose</h2>
+        <p style="font-size:1.0625rem; color:var(--color-text-main); margin-bottom:1.25rem; line-height:1.7;">
+          At <strong>Home Pharmacy</strong>, we believe that health is a fundamental right, not a luxury. Across our community, thousands of working individuals, elderly residents, and families are forced into the heartbreaking choice between paying rent, buying food, or filling critical prescriptions.
+        </p>
+        <p style="color:var(--color-text-muted); line-height:1.7; margin-bottom:1.25rem;">
+          Our charitable medication assistance model bridges this divide by providing essential prescriptions and compassionate, one-on-one clinical counseling to those who are uninsured, underinsured, or experiencing temporary financial crises.
+        </p>
+        <div style="background:#fff; border-left:4px solid var(--color-accent-gold); padding:1.25rem 1.5rem; border-radius:var(--radius-sm); box-shadow:var(--shadow-sm);">
+          <p style="font-style:italic; color:var(--color-primary-dark); font-weight:600;">
+            "We do not merely dispense medication — we restore peace of mind, prevent chronic illness complications, and treat every neighbor with the dignity they deserve."
+          </p>
+        </div>
+      </div>
+      <div class="about-story-img">
+        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80" alt="Doctor talking kindly with patient" />
+      </div>
+    </div>
+
+    <!-- Core Values -->
+    <div style="background:#ffffff; border-radius:var(--radius-md); border:1px solid var(--color-border); padding:3.5rem 2.5rem; margin-top:2rem;">
+      <h2 class="section-title text-center" style="margin-bottom:2.5rem;">The Principles That Guide Us</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:2rem;">
+        <div>
+          <h3 style="font-family:var(--font-heading); font-size:1.25rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">🌟 Dignity & Respect</h3>
+          <p style="color:var(--color-text-muted); font-size:0.95rem;">Every patient is greeted without judgment or stigma, in an environment that honors privacy and individual humanity.</p>
+        </div>
+        <div>
+          <h3 style="font-family:var(--font-heading); font-size:1.25rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">🛡️ Clinical Excellence</h3>
+          <p style="color:var(--color-text-muted); font-size:0.95rem;">Safety, dosage accuracy, and interaction screenings are maintained to the highest state board and professional standards.</p>
+        </div>
+        <div>
+          <h3 style="font-family:var(--font-heading); font-size:1.25rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">🤝 Community Partnership</h3>
+          <p style="color:var(--color-text-muted); font-size:0.95rem;">We collaborate closely with free clinics, religious centers, civic charities, and regional health systems to maximize impact.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col col-brand">
+          <div class="footer-logo">
+            <span class="brand-name">HOME PHARMACY</span>
+            <span class="brand-tagline">COMMUNITY CARE & RX ASSISTANCE</span>
+          </div>
+          <div class="footer-address">
+            <p class="address-line">📍 <strong>717 W Lancaster Rd</strong></p>
+            <p class="address-line">Orlando, FL 32809</p>
+            <p class="address-line mt-2">📞 <a href="tel:4076360929">(407) 636-0929</a></p>
+            <p class="address-line">✉️ <a href="mailto:ceo@homepharmacyrx.com">ceo@homepharmacyrx.com</a></p>
+          </div>
+        </div>
+
+        <div class="footer-col col-hours">
+          <h3 class="footer-heading">Hours of Operation</h3>
+          <ul class="hours-list">
+            <li><span>Monday – Friday:</span> <span>9:00 AM – 5:00 PM</span></li>
+            <li><span>Saturday:</span> <span>9:00 AM – 1:00 PM</span></li>
+            <li><span>Sunday:</span> <span>Closed</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col col-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="patients.html">Patient Assistance</a></li>
+            <li><a href="prescribers.html">Healthcare Prescribers</a></li>
+            <li><a href="medications.html">Formulary & Medications</a></li>
+            <li><a href="contact.html">Contact & Directions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col col-social">
+          <h3 class="footer-heading">Support Our Cause</h3>
+          <p class="social-text">Your contributions keep life-saving medications accessible for local Orlando families.</p>
+          <a href="donate.html" class="btn btn-outline-gold btn-small">Donate Today</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Home Pharmacy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

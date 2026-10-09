@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medications Available | Home Pharmacy Formulary</title>
+  <meta name="description" content="View the common medication categories and therapeutic classes available at Home Pharmacy in Orlando, FL." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Urbanist:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-header {
+      background: linear-gradient(180deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+      color: #fff;
+      padding: 5rem 0 4rem;
+      text-align: center;
+      border-bottom: 1px solid var(--color-border-dark);
+    }
+    .page-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.25rem, 4vw, 3.25rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .page-subtitle {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .cat-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .cat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-accent-gold);
+    }
+    .cat-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .cat-card p {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+    }
+    .disclaimer-card {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: var(--radius-sm);
+      padding: 1.5rem;
+      margin-top: 3.5rem;
+      color: #991b1b;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <div class="container announcement-inner">
+      <span>Serving Orlando & Central Florida with Compassionate, Affordable Pharmacy Care</span>
+      <div class="top-contact-links">
+        <a href="tel:4076360929">📞 (407) 636-0929</a>
+        <span class="sep">•</span>
+        <a href="mailto:ceo@homepharmacyrx.com">✉️ ceo@homepharmacyrx.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-mark">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            <path d="M12 7v6"/>
+            <path d="M9 10h6"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">HOME PHARMACY</span>
+          <span class="brand-tagline">COMMUNITY & CHARITABLE CARE</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="patients.html" class="nav-link">Patients</a></li>
+          <li class="nav-item"><a href="prescribers.html" class="nav-link">Prescribers</a></li>
+          <li class="nav-item"><a href="medications.html" class="nav-link" style="color:var(--color-accent-gold)">Medications</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="donate.html" class="btn btn-outline-gold">Donate Today</a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="logo-text"><span class="brand-name">HOME PHARMACY</span></div>
+      <button class="close-drawer-btn" id="closeDrawerBtn">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="patients.html">For Patients</a></li>
+      <li><a href="prescribers.html">For Prescribers</a></li>
+      <li><a href="medications.html">Medications Available</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="donate.html" class="drawer-donate-btn">Donate Today</a></li>
+    </ul>
+  </div>
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Medications & Formulary</h1>
+      <p class="page-subtitle">We stock essential maintenance medications for chronic conditions to support health equity and long-term wellness.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container" style="padding-top:4rem; padding-bottom:5rem;">
+    
+    <div style="text-align:center; max-width:760px; margin:0 auto 2.5rem;">
+      <h2 class="section-title">Commonly Supported Therapeutic Categories</h2>
+      <p style="color:var(--color-text-muted);">Medication availability fluctuates based on community assistance inventory and donations. Contact us directly at (407) 636-0929 to confirm specific drug strengths and forms.</p>
+    </div>
+
+    <div class="category-grid">
+      <div class="cat-card">
+        <h3>🫀 Blood Pressure & Heart</h3>
+        <p>Lisinopril, Amlodipine, Losartan, Metoprolol, Hydrochlorothiazide, Carvedilol, and other cardiovascular therapies.</p>
+      </div>
+
+      <div class="cat-card">
+        <h3>🩸 Diabetes & Endocrine</h3>
+        <p>Metformin, Glipizide, select insulin supplies, testing meters, lancets, and diabetes monitoring essentials.</p>
+      </div>
+
+      <div class="cat-card">
+        <h3>🫁 Asthma & COPD</h3>
+        <p>Albuterol inhalers, steroid maintenance inhalers, Montelukast, and respiratory nebulizer solutions.</p>
+      </div>
+
+      <div class="cat-card">
+        <h3>🧬 Cholesterol & Lipids</h3>
+        <p>Atorvastatin, Simvastatin, Rosuvastatin, Pravastatin, and associated lipid-lowering agents.</p>
+      </div>
+
+      <div class="cat-card">
+        <h3>🦠 Antibiotics & Infections</h3>
+        <p>Amoxicillin, Azithromycin, Cephalexin, Doxycycline, Sulfamethoxazole/Trimethoprim, and antifungal treatments.</p>
+      </div>
+
+      <div class="cat-card">
+        <h3>🧠 Mental Health & Wellness</h3>
+        <p>Sertraline, Fluoxetine, Escitalopram, Citalopram, Trazodone, and non-controlled emotional well-being medications.</p>
+      </div>
+
+      <div class="cat-card">
+        <h3>🌾 Allergies & Antihistamines</h3>
+        <p>Cetirizine, Loratadine, Fluticasone nasal sprays, and allergy management solutions.</p>
+      </div>
+
+      <div class="cat-card">
+        <h3>⚡ Seizures & Neurological</h3>
+        <p>Levetiracetam, Gabapentin (where compliant), Topiramate, and maintenance neurological care.</p>
+      </div>
+
+      <div class="cat-card">
+        <h3>🍽️ Gastrointestinal / Stomach</h3>
+        <p>Omeprazole, Pantoprazole, Famotidine, Ondansetron, and digestive support medicines.</p>
+      </div>
+
+      <div class="cat-card">
+        <h3>🦋 Thyroid Regulation</h3>
+        <p>Levothyroxine at various microgram strengths for hypothyroid maintenance.</p>
+      </div>
+
+      <div class="cat-card">
+        <h3>👩 Women’s Health</h3>
+        <p>Prenatal vitamins, hormone support, and general wellness therapeutics.</p>
+      </div>
+
+      <div class="cat-card">
+        <h3>👁️ Eye & Ear Care</h3>
+        <p>Glaucoma pressure drops (Latanoprost, Timolol) and antimicrobial ophthalmic drops.</p>
+      </div>
+    </div>
+
+    <!-- Controlled Substances Policy Banner -->
+    <div class="disclaimer-card">
+      <h3 style="font-family:var(--font-heading); font-size:1.15rem; font-weight:700; margin-bottom:0.5rem;">⚠️ Controlled Substances Statement</h3>
+      <p>Home Pharmacy strictly complies with safety regulations and does <strong>not</strong> stock, carry, or dispense DEA Schedule II, III, IV, or V controlled substances (such as opioids, narcotics, benzodiazepines, or stimulant ADHD medications). Please consult your primary care doctor for non-controlled therapeutic alternatives.</p>
+    </div>
+
+    <div style="text-align:center; margin-top:3.5rem;">
+      <a href="tel:4076360929" class="btn btn-gold btn-large">Inquire About a Specific Medication: (407) 636-0929</a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col col-brand">
+          <div class="footer-logo">
+            <span class="brand-name">HOME PHARMACY</span>
+            <span class="brand-tagline">COMMUNITY CARE & RX ASSISTANCE</span>
+          </div>
+          <div class="footer-address">
+            <p class="address-line">📍 <strong>717 W Lancaster Rd</strong></p>
+            <p class="address-line">Orlando, FL 32809</p>
+            <p class="address-line mt-2">📞 <a href="tel:4076360929">(407) 636-0929</a></p>
+            <p class="address-line">✉️ <a href="mailto:ceo@homepharmacyrx.com">ceo@homepharmacyrx.com</a></p>
+          </div>
+        </div>
+
+        <div class="footer-col col-hours">
+          <h3 class="footer-heading">Hours of Operation</h3>
+          <ul class="hours-list">
+            <li><span>Monday – Friday:</span> <span>9:00 AM – 5:00 PM</span></li>
+            <li><span>Saturday:</span> <span>9:00 AM – 1:00 PM</span></li>
+            <li><span>Sunday:</span> <span>Closed</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col col-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="patients.html">Patient Assistance</a></li>
+            <li><a href="prescribers.html">Healthcare Prescribers</a></li>
+            <li><a href="medications.html">Formulary & Medications</a></li>
+            <li><a href="contact.html">Contact & Directions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col col-social">
+          <h3 class="footer-heading">Support Our Cause</h3>
+          <p class="social-text">Your contributions keep life-saving medications accessible for local Orlando families.</p>
+          <a href="donate.html" class="btn btn-outline-gold btn-small">Donate Today</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Home Pharmacy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
